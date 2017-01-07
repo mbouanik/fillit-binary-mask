@@ -6,7 +6,7 @@
 /*   By: mbouanik <mbouanik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 15:32:14 by mbouanik          #+#    #+#             */
-/*   Updated: 2016/12/22 21:38:29 by mbouanik         ###   ########.fr       */
+/*   Updated: 2017/01/07 17:59:13 by mbouanik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ int			main(int ac, char **av)
 	int					nb_pieces;
 	int					size;
 
-	nb_pieces = ft_cp(ac, av);
-	binary = (unsigned long *)malloc(sizeof(unsigned long) * nb_pieces + 1);
 	if (!(pieces = ft_oktab(ac, av)))
 		return (0);
+	nb_pieces = ft_cp(ac, av);
+	binary = (unsigned long *)malloc(sizeof(unsigned long) * nb_pieces + 1);
 	size = 0;
 	while (size < nb_pieces)
 	{
@@ -56,7 +56,7 @@ int			main(int ac, char **av)
 		size++;
 	grid = ft_new_grid(grid, size);
 	while (!(ft_fill_it(grid, binary, size, 0)))
-		grid = ft_new_grid(grid, size++);
+		grid = ft_new_grid(grid, ++size);
 	ft_print_grid(grid, size);
 	return (0);
 }

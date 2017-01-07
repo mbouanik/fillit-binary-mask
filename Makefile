@@ -6,14 +6,13 @@
 #    By: mbouanik <mbouanik@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/15 23:06:48 by mbouanik          #+#    #+#              #
-#    Updated: 2016/12/16 18:00:41 by mbouanik         ###   ########.fr        #
+#    Updated: 2017/01/06 12:58:14 by mbouanik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fillit
 
 SRC = 	fillit.c\
-		ft_coordinates.c\
 		ft_placement.c\
 		parseur.c\
 		parseur2.c\
